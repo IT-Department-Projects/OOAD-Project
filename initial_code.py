@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @aimananees
- Unwatch 1
-  Star 0
- Fork 1 aimananees/OOAD-Project
-forked from IT-Department-Projects/OOAD-Project
- Code  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Branch: patch-1 Find file Copy pathOOAD-Project/initial_program.py
-0e7c1c0  4 hours ago
-@aimananees aimananees Create initial_program.py
-1 contributor
-RawBlameHistory     
-910 lines (649 sloc)  27.6 KB
 class PATIENT:
     
     
