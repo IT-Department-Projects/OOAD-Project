@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hospitalmanagementsystem-edfd9",
+  "private_key_id": "3826ac933f8b45ce763a8142a323be2654e0cd16",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmT1QM1u6klynM\nHvC4gj47FSGFHUy/fRJP1VDGpiUzuid1XnF5GAXnfcKo4bH9Ws9cNdWKzAuO5Th0\ng/Kjc2IZCkFXMKcILqSPyqFdnCBnyo8c66gnHN4K4sd8ZMi4JEN8BMCHPhfZDY1v\nnFOJp8DzQ1ndCb+ANlSaNqGKQnsBv/l3c2cOdwiDil7aULf1hu6G90pvmBjy7PdK\nOYNEg9VBz/CGneKNFfM0Vxc0RtT18y72UXL/XvGyOKWo0yfzOdtoOcO6436l0D/L\n+DF0ORBphIbRKsI9zFmmJWZkxIPpMMTY+a65Fxvz1L07Vd08nmiRuc4MPTLyXqLi\nzA+yfzHJAgMBAAECggEAasLsCt4DDoe3nkCSeW+qsVTsUr6vYRHSKoueshdANIeh\nAvhg0cK5L5UM3EsebqzYBrLMZbB9DvtZFXsKzSCp7bcmoOkroNYIcAI9OpGaP+bJ\nnmAtbwZaCBTyyIkOTR+Cbt/CFE+pEX5guDBbdDfLZp5q1rmGRLEb+G9vngj1W/Yv\nK4up85ap6qbL0qLS+mDaM583GttzkF3qaoUKXDBaSSMgTM3ZP9nFYVCmcp7FHcRy\nQ9xvVMPkrw2YcW64YZx0Np8UnxdDiGXdjeNkDarMuc9SgbPfcWLuvTWeYy65Qrhw\n0D9o2ytFY/KxC8tKNsTl+Ph4gMoJKB3YmC85GgIzzQKBgQDPtqTOGMy3pcMEwAv5\nzwAtuH1YgHFqV9QsoOAeHcwuqMfpUrBhEurg1ChFmEpmGoxZHyuCrjj96Q5o1x1F\ny0DGCsS3cXdYO/UekJiOVJMs9o/S9dzcsQ5LNHmKjO2tTuKuyWIoQLu0zVH9I/eE\ngn42MnxclWhNxx+p720HBsU1TwKBgQDM+LE10nKsCQUnZ//1+PzVjagrArX5WTGj\nSHx1FIsbJV24SAy+3sCbqfNYjbvZVZcWun1qMoV1fjJaFOAMFFZ9EHmGaSZsxQ+W\npg4naoxux0+uzlW+0UZiBqveB2FY6+TU3l6OrNtzhRIFRKUF8/4zo3SpSTQQbQlV\n2wOnh3uRZwKBgAW8k5yljrHbwCEXdL03fFfG6p9RHNDFEDUTVF1AkW0QeET3Zauo\nrBf9hAc4B4X+YbXsaHU5fpV0pFM87bAJxwYxMfGnDpa/QSvQ7oWvzEjHnn1DERB/\nS1fEYT70WXQZ46TUJwPZldWOfh8xqRpdyEKS7mBYOAM95p/43tf81eF9AoGAdgpq\nk6Jko6p2K2F7SL5hbOKtjEd9YOH68hvWgN6Z1cJJHM1xeaJyrbLMD51gJyNhZZd0\njmoV7boFaVdIR+yWemO4eK2pkU5TUeDDmfOEeG+T9gmh28hNjjplU/JQH5OKLwT4\n05W8s+RYomwL1UfUhwyFLNCZiTQiAi2lBx/BC9UCgYEAuatITTZDGqSEMgpMGYGI\nS21FGzljgxquQkp8DZuuTwbY2Q+nwdaC/BWCjTz+KAEtk89kVA/SKOeszckO4Vbu\nT36nhgA0UFs+SQCWHfdSaRpyvS0SWp9LUgkMLkeMoS2WrEOGSzzyh4BM0nmAp9rT\nyKB5toGNbi1rne+9T0zxLRA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hospitalmanagementsystem@hospitalmanagementsystem-edfd9.iam.gserviceaccount.com",
+  "client_id": "104909835688170569576",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hospitalmanagementsystem%40hospitalmanagementsystem-edfd9.iam.gserviceaccount.com"
+}
