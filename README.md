@@ -7,12 +7,31 @@
 * Python Web App has been made for this!
 
 2. **User Side**:
+
+## Doctor Login
 * Android and iOS App to allow patients to select which hospital they want to book an appointment to!
 * Allows users to know the cost of the treatment before-hand thereby allowing them to use a preference order for the same!  
+
+## Patient Login
+
 
 ## About
 * Allows you to book appointments via the Mobile App.
 
-## Algorithm used:
-* This project implements a modified version of the Gale-Shapely Algorithm for assigning patients to the desired hospitals that they want to go to!
- 
+## Documentation for Oak Crest 
+
+### Diagrams to be drawn:
+* Class Diagram
+* State Diagram
+* Use Case Diagrams
+* Sequence Diagrams
+* Deployment Diagrams
+
+* Use Case Points Diagram
+
+### Classes in the Class Diagram
+
+
+## To Do:
+-[] Class Diagrams
+-[] SIde Bar in Android and iOS App.
