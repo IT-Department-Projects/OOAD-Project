@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E14780DA1E3667D700B32037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14780D91E3667D700B32037 /* AppDelegate.swift */; };
+		E14780DC1E3667D700B32037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14780DB1E3667D700B32037 /* ViewController.swift */; };
+		E14780DF1E3667D700B32037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14780DD1E3667D700B32037 /* Main.storyboard */; };
+		E14780E21E3667D700B32037 /* HospitalManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E14780E01E3667D700B32037 /* HospitalManagement.xcdatamodeld */; };
+		E14780E41E3667D700B32037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14780E31E3667D700B32037 /* Assets.xcassets */; };
+		E14780E71E3667D700B32037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14780E51E3667D700B32037 /* LaunchScreen.storyboard */; };
+		E14780F21E3667D700B32037 /* HospitalManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14780F11E3667D700B32037 /* HospitalManagementTests.swift */; };
+		E14780FD1E3667D700B32037 /* HospitalManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14780FC1E3667D700B32037 /* HospitalManagementUITests.swift */; };
+		E147810C1E3668C400B32037 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147810A1E3668C400B32037 /* PatientViewController.swift */; };
+		E147810D1E3668C400B32037 /* PatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E147810B1E3668C400B32037 /* PatientViewController.xib */; };
+		E14781101E366AFC00B32037 /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147810E1E366AFC00B32037 /* DoctorViewController.swift */; };
+		E14781111E366AFC00B32037 /* DoctorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E147810F1E366AFC00B32037 /* DoctorViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E14780EE1E3667D700B32037 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14780CE1E3667D700B32037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14780D51E3667D700B32037;
+			remoteInfo = HospitalManagement;
+		};
+		E14780F91E3667D700B32037 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14780CE1E3667D700B32037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14780D51E3667D700B32037;
+			remoteInfo = HospitalManagement;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E14780D61E3667D700B32037 /* HospitalManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14780D91E3667D700B32037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E14780DB1E3667D700B32037 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E14780DE1E3667D700B32037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E14780E11E3667D700B32037 /* HospitalManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HospitalManagement.xcdatamodel; sourceTree = "<group>"; };
+		E14780E31E3667D700B32037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E14780E61E3667D700B32037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E14780E81E3667D700B32037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E14780ED1E3667D700B32037 /* HospitalManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HospitalManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14780F11E3667D700B32037 /* HospitalManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalManagementTests.swift; sourceTree = "<group>"; };
+		E14780F31E3667D700B32037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E14780F81E3667D700B32037 /* HospitalManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HospitalManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14780FC1E3667D700B32037 /* HospitalManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalManagementUITests.swift; sourceTree = "<group>"; };
+		E14780FE1E3667D700B32037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E147810A1E3668C400B32037 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		E147810B1E3668C400B32037 /* PatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientViewController.xib; sourceTree = "<group>"; };
+		E147810E1E366AFC00B32037 /* DoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
+		E147810F1E366AFC00B32037 /* DoctorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E14780D31E3667D700B32037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14780EA1E3667D700B32037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14780F51E3667D700B32037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E14780CD1E3667D700B32037 = {
+			isa = PBXGroup;
+			children = (
+				E14780D81E3667D700B32037 /* HospitalManagement */,
+				E14780F01E3667D700B32037 /* HospitalManagementTests */,
+				E14780FB1E3667D700B32037 /* HospitalManagementUITests */,
+				E14780D71E3667D700B32037 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E14780D71E3667D700B32037 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E14780D61E3667D700B32037 /* HospitalManagement.app */,
+				E14780ED1E3667D700B32037 /* HospitalManagementTests.xctest */,
+				E14780F81E3667D700B32037 /* HospitalManagementUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E14780D81E3667D700B32037 /* HospitalManagement */ = {
+			isa = PBXGroup;
+			children = (
+				E14780D91E3667D700B32037 /* AppDelegate.swift */,
+				E14780DB1E3667D700B32037 /* ViewController.swift */,
+				E14780DD1E3667D700B32037 /* Main.storyboard */,
+				E147810E1E366AFC00B32037 /* DoctorViewController.swift */,
+				E147810F1E366AFC00B32037 /* DoctorViewController.xib */,
+				E147810A1E3668C400B32037 /* PatientViewController.swift */,
+				E147810B1E3668C400B32037 /* PatientViewController.xib */,
+				E14780E31E3667D700B32037 /* Assets.xcassets */,
+				E14780E51E3667D700B32037 /* LaunchScreen.storyboard */,
+				E14780E81E3667D700B32037 /* Info.plist */,
+				E14780E01E3667D700B32037 /* HospitalManagement.xcdatamodeld */,
+			);
+			path = HospitalManagement;
+			sourceTree = "<group>";
+		};
+		E14780F01E3667D700B32037 /* HospitalManagementTests */ = {
+			isa = PBXGroup;
+			children = (
+				E14780F11E3667D700B32037 /* HospitalManagementTests.swift */,
+				E14780F31E3667D700B32037 /* Info.plist */,
+			);
+			path = HospitalManagementTests;
+			sourceTree = "<group>";
+		};
+		E14780FB1E3667D700B32037 /* HospitalManagementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E14780FC1E3667D700B32037 /* HospitalManagementUITests.swift */,
+				E14780FE1E3667D700B32037 /* Info.plist */,
+			);
+			path = HospitalManagementUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E14780D51E3667D700B32037 /* HospitalManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14781011E3667D700B32037 /* Build configuration list for PBXNativeTarget "HospitalManagement" */;
+			buildPhases = (
+				E14780D21E3667D700B32037 /* Sources */,
+				E14780D31E3667D700B32037 /* Frameworks */,
+				E14780D41E3667D700B32037 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HospitalManagement;
+			productName = HospitalManagement;
+			productReference = E14780D61E3667D700B32037 /* HospitalManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E14780EC1E3667D700B32037 /* HospitalManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14781041E3667D700B32037 /* Build configuration list for PBXNativeTarget "HospitalManagementTests" */;
+			buildPhases = (
+				E14780E91E3667D700B32037 /* Sources */,
+				E14780EA1E3667D700B32037 /* Frameworks */,
+				E14780EB1E3667D700B32037 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14780EF1E3667D700B32037 /* PBXTargetDependency */,
+			);
+			name = HospitalManagementTests;
+			productName = HospitalManagementTests;
+			productReference = E14780ED1E3667D700B32037 /* HospitalManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E14780F71E3667D700B32037 /* HospitalManagementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14781071E3667D700B32037 /* Build configuration list for PBXNativeTarget "HospitalManagementUITests" */;
+			buildPhases = (
+				E14780F41E3667D700B32037 /* Sources */,
+				E14780F51E3667D700B32037 /* Frameworks */,
+				E14780F61E3667D700B32037 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14780FA1E3667D700B32037 /* PBXTargetDependency */,
+			);
+			name = HospitalManagementUITests;
+			productName = HospitalManagementUITests;
+			productReference = E14780F81E3667D700B32037 /* HospitalManagementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E14780CE1E3667D700B32037 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Aiman Abdullah Anees";
+				TargetAttributes = {
+					E14780D51E3667D700B32037 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V6PZYKT7A6;
+						ProvisioningStyle = Automatic;
+					};
+					E14780EC1E3667D700B32037 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V6PZYKT7A6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E14780D51E3667D700B32037;
+					};
+					E14780F71E3667D700B32037 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V6PZYKT7A6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E14780D51E3667D700B32037;
+					};
+				};
+			};
+			buildConfigurationList = E14780D11E3667D700B32037 /* Build configuration list for PBXProject "HospitalManagement" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E14780CD1E3667D700B32037;
+			productRefGroup = E14780D71E3667D700B32037 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E14780D51E3667D700B32037 /* HospitalManagement */,
+				E14780EC1E3667D700B32037 /* HospitalManagementTests */,
+				E14780F71E3667D700B32037 /* HospitalManagementUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E14780D41E3667D700B32037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14780E71E3667D700B32037 /* LaunchScreen.storyboard in Resources */,
+				E14780E41E3667D700B32037 /* Assets.xcassets in Resources */,
+				E14781111E366AFC00B32037 /* DoctorViewController.xib in Resources */,
+				E147810D1E3668C400B32037 /* PatientViewController.xib in Resources */,
+				E14780DF1E3667D700B32037 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14780EB1E3667D700B32037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14780F61E3667D700B32037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E14780D21E3667D700B32037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14780DC1E3667D700B32037 /* ViewController.swift in Sources */,
+				E14781101E366AFC00B32037 /* DoctorViewController.swift in Sources */,
+				E14780DA1E3667D700B32037 /* AppDelegate.swift in Sources */,
+				E147810C1E3668C400B32037 /* PatientViewController.swift in Sources */,
+				E14780E21E3667D700B32037 /* HospitalManagement.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14780E91E3667D700B32037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14780F21E3667D700B32037 /* HospitalManagementTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14780F41E3667D700B32037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14780FD1E3667D700B32037 /* HospitalManagementUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E14780EF1E3667D700B32037 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14780D51E3667D700B32037 /* HospitalManagement */;
+			targetProxy = E14780EE1E3667D700B32037 /* PBXContainerItemProxy */;
+		};
+		E14780FA1E3667D700B32037 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14780D51E3667D700B32037 /* HospitalManagement */;
+			targetProxy = E14780F91E3667D700B32037 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E14780DD1E3667D700B32037 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E14780DE1E3667D700B32037 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E14780E51E3667D700B32037 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E14780E61E3667D700B32037 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E14780FF1E3667D700B32037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E14781001E3667D700B32037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E14781021E3667D700B32037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V6PZYKT7A6;
+				INFOPLIST_FILE = HospitalManagement/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.App01.HospitalManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E14781031E3667D700B32037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V6PZYKT7A6;
+				INFOPLIST_FILE = HospitalManagement/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.App01.HospitalManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E14781051E3667D700B32037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V6PZYKT7A6;
+				INFOPLIST_FILE = HospitalManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.App01.HospitalManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HospitalManagement.app/HospitalManagement";
+			};
+			name = Debug;
+		};
+		E14781061E3667D700B32037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V6PZYKT7A6;
+				INFOPLIST_FILE = HospitalManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.App01.HospitalManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HospitalManagement.app/HospitalManagement";
+			};
+			name = Release;
+		};
+		E14781081E3667D700B32037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = V6PZYKT7A6;
+				INFOPLIST_FILE = HospitalManagementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.App01.HospitalManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HospitalManagement;
+			};
+			name = Debug;
+		};
+		E14781091E3667D700B32037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = V6PZYKT7A6;
+				INFOPLIST_FILE = HospitalManagementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.App01.HospitalManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HospitalManagement;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E14780D11E3667D700B32037 /* Build configuration list for PBXProject "HospitalManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14780FF1E3667D700B32037 /* Debug */,
+				E14781001E3667D700B32037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14781011E3667D700B32037 /* Build configuration list for PBXNativeTarget "HospitalManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14781021E3667D700B32037 /* Debug */,
+				E14781031E3667D700B32037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E14781041E3667D700B32037 /* Build configuration list for PBXNativeTarget "HospitalManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14781051E3667D700B32037 /* Debug */,
+				E14781061E3667D700B32037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E14781071E3667D700B32037 /* Build configuration list for PBXNativeTarget "HospitalManagementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14781081E3667D700B32037 /* Debug */,
+				E14781091E3667D700B32037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E14780E01E3667D700B32037 /* HospitalManagement.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E14780E11E3667D700B32037 /* HospitalManagement.xcdatamodel */,
+			);
+			currentVersion = E14780E11E3667D700B32037 /* HospitalManagement.xcdatamodel */;
+			path = HospitalManagement.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E14780CE1E3667D700B32037 /* Project object */;
+}

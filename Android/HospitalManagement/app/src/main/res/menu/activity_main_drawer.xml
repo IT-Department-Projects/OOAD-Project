@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_appointments"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Appointments" />
+        <item
+            android:id="@+id/nav_medical_reports"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Medical Reports" />
+        <item
+            android:id="@+id/nav_profile_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Profile Settings" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_menu_send"
+            android:title="FAQ" />
+
+</menu>
