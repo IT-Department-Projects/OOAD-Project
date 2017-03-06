@@ -9,11 +9,11 @@ class CreatePatient:
 		self.user_insurance=patient_insurance
 		self.user_address=patient_address
 
-		#firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
-		#result=firebase1.get('/patient',None)
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/patient',None)
 
 		user_key_list=[]
-		if 1 == 1:
+		if not result.keys():
 			firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
 			result=firebase1.post('/patient',{
 				"username":self.user_username,
