@@ -201,6 +201,26 @@ class Doctor:
 					pass
 
 				break
+	def searchPatient(self,mobileNumber):
+		self.patient_mobile_number=mobileNumber
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/patient',None)
+		user_key_list=[]
+
+		for i in result.keys():
+			user_key_list.append(i)
+
+		for i in user_key_list:
+			if result[i]['mobile_number'] == self.patient_mobile_number:
+				print("Name: "+result[i]['name'])
+				print("Phone Number: "+result[i]['mobile_number'])
+				print("File Number: "+i)
+				print("Address: "+result[i]['address'])
+				print("Insurance: "+result[i]['insurance'])
+				print("Appointments: "+str(result[i]['appointments_count']))
+				if result[i]['appointments_count'] > 0:
+					pass
+				break
 
 
 
