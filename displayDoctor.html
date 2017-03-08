@@ -1,0 +1,20 @@
+<html>
+	<h3>Name: {{name}}</h3>
+	<h3>Aadhar Number: {{aadhar}}</h3>
+	<h3>Employee Id: {{employee}}</h3>
+	<h3>Appointment count: {{appointments}}</h3>
+	<div class ="Search Appointments">
+		<ul>
+  			{% for attr in number_list %}
+  				<li>{{attr}}</li>
+  			{% endfor %}
+		</ul>
+	</div>
+	<h3>Department: {{department}}</h3>
+	<h3>Hospital: {{hospital}}</h3>
+	<h3>Mobile Number: {{mobile}}</h3>
+	<div class ="Back">
+		<a href="http://127.0.0.1:5000/welcome">Back</a>
+	</div>
+</html>
+
