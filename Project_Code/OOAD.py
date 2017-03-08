@@ -40,7 +40,20 @@ def register():
 	error=None
 	if request.method =='POST':
 		flag=0
-		if request.form['password'] == request.form['againPassword']:
+
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/admin',None)
+		user_key_list=[]
+		count=0
+		for i in result.keys():
+			user_key_list.append(i)
+
+		for i in user_key_list:
+			if result[i]['username'] == request.form['username']:
+				count=count+1
+
+
+		if request.form['password'] == request.form['againPassword'] and count == 0:
 			firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
 			result=firebase1.post('/admin',{
 				"username":request.form['username'],
@@ -48,25 +61,118 @@ def register():
 				"name":request.form['name']
 			})
 			flag=1
-			Name=request.form['name']
+			count=0
 		if flag == 1:
-			return render_template('welcome.html',name=Name)
-		else:
-			error='Invalid credentials. Please try again.'
+			return render_template('welcome.html')
+		elif request.form['password'] != request.form['againPassword']:
+			error='Error: both the passwords are not matching'
+		elif count >=1:
+			error='username already exists'
 	return render_template('register.html',error=error)
 
 @app.route('/addDoctor',methods=['GET','POST'])
 def addDoctor():
 	error=None
-	return render_template('addDoctor.html',name=Name)
+	if request.method == 'POST':
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/doctor',None)
+		user_key_list=[]
+		count=0
+		for i in result.keys():
+			user_key_list.append(i)
 
+		for i in user_key_list:
+			if result[i]['name'] == request.form['name'] and result[i]['department'] == request.form['department'] and result[i]['hospital'] == request.form['hospital']:
+				count=count+1
 
+		if len(request.form['mobile']) > 10:
+			error='Invalid Number'
 
+		elif count == 0:
+			firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+			result=firebase1.post('/doctor',{
+				"aadhar_number":request.form['aadhar'],
+				"name":request.form['name'],
+				"hospital":request.form['hospital'],
+				"department":request.form['department'],
+				"mobile_number":request.form['mobile'],
+			})
+			name=request.form['name']
+			firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+			result=firebase1.get('/doctor',None)
+			user_key_list=[]
+			for i in result.keys():
+				user_key_list.append(str(i))
+			for i in user_key_list:
+				if result[i]['name'] == name:
+					firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+					result=firebase1.patch('/doctor/'+i,{
+						"employee_number":i,
+						"appointments_count":0
+					})
+			count=0
+			user_key_list=[]
+			return render_template('welcome.html')
+		elif count >= 1:
+			error='Doctor alreay exists'
 
+	return render_template('addDoctor.html',error=error)
 
+@app.route('/searchDoctor',methods=['GET','POST'])
+def searchDoctor():
+	error=None
+	if request.method == 'POST':
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/doctor',None)
+		user_key_list=[]
+		flag=0
+		for i in result.keys():
+			user_key_list.append(i)
 
+		for i in user_key_list:
+			if result[i]['mobile_number'] == request.form['mobile']:
+				name=result[i]['name']
+				aadhar=result[i]['aadhar_number']
+				appointments=result[i]['appointments_count']
+				department=result[i]['department']
+				hospital=result[i]['hospital']
+				mobile=result[i]['mobile_number']
+				employee=result[i]['employee_number']
+				flag=1
+				user_key_list=[]
+				return render_template('displayDoctor.html',name=name,aadhar=aadhar,appointments=appointments,department=department,hospital=hospital,mobile=mobile,employee=employee)
 
+		if flag == 0:
+			error="Invalid Doctor"
 
+	return render_template('searchDoctor.html',error=error)
+
+@app.route('/searchPatient',methods=['GET','POST'])
+def searchPatient():
+	error=None
+	if request.method == 'POST':
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/patient',None)
+		user_key_list=[]
+		flag=0
+		for i in result.keys():
+			user_key_list.append(i)
+
+		for i in user_key_list:
+			if result[i]['mobile_number'] == request.form['mobile']:
+				name=result[i]['name']
+				file=result[i]['file_number']
+				mobile=result[i]['mobile_number']
+				address=result[i]['address']
+				appointments=result[i]['appointments_count']
+				flag=1
+				user_key_list=[]
+				return render_template('displayPatient.html',name=name,file=file,mobile=mobile,address=address,appointments=appointments)
+
+		if flag == 0:
+			error="Invalid Patient"
+
+	return render_template('searchPatient.html',error=error)
 
 
 if __name__ == '__main__':
