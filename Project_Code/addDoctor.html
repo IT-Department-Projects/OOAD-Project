@@ -1,22 +1,31 @@
 <html>
   <head>
-    <title>Flask Intro - login page</title>
+    <title>Add Doctor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="container">
-      <h1>Please login</h1>
+      <h1>Add Doctor</h1>
       <br>
       <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="{{
-          request.form.username }}">
-         <input type="password" placeholder="Password" name="password" value="{{
-          request.form.password }}">
-        <input class="btn btn-default" type="submit" value="Login">
-        <div class="login-help">
-          <a href="http://127.0.0.1:5000/register">Register</a>
-        </div>
+        <input type="text" placeholder="Aadhar Number" name="aadhar" value="{{
+          request.form.aadhar }}">
+        <br>
+        <input type="text" placeholder="Name" name="name" value="{{
+          request.form.name }}">
+        <br>
+        <input type="text" placeholder="Department" name="department" value="{{
+          request.form.department }}">
+        <br>
+        <input type="text" placeholder="Hospital" name="hospital" value="{{
+          request.form.hospital }}">
+        <br>
+        <input type="text" placeholder="Mobile Number" name="mobile" value="{{
+          request.form.mobile }}"> 
+        <br>
+        <br>
+        <input class="btn btn-default" type="submit" value="Add Doctor">
       </form>
       {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}</p>
