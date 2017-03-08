@@ -186,25 +186,6 @@ def searchPatient():
 			error="Invalid Patient"
 
 	return render_template('searchPatient.html',error=error)
-@app.route('/displayAppointments/<name>',methods=['GET'])
-def displayAppointments(name):
-	firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
-	result=firebase1.get('/appointments',None)
-	user_key_list=[]
-	patient_mobile_numbers=[]
-	count=0
-	for i in result.keys():
-		user_key_list.append(i)
-	for i in user_key_list:
-		if result[i]['doctor_name'] == name:
-			count=count+1
-			patient_mobile_numbers.append(result[i]['patient_number'])
-
-	print(patient_mobile_numbers)
-
-	return render_template('viewAppointments.html',patient_list=patient_mobile_numbers,count=count)
-	
-
 
 
 
