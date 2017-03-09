@@ -3,6 +3,13 @@
 	<h3>Aadhar Number: {{aadhar}}</h3>
 	<h3>Employee Id: {{employee}}</h3>
 	<h3>Appointment count: {{appointments}}</h3>
+	<div class ="Search Appointments">
+		<ul>
+  			{% for attr in url_list %}
+  				<a href={{attr}}>{{attr}}</a>
+  			{% endfor %}
+		</ul>
+	</div>
 	<h3>Department: {{department}}</h3>
 	<h3>Hospital: {{hospital}}</h3>
 	<h3>Mobile Number: {{mobile}}</h3>
