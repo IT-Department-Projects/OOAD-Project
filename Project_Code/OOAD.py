@@ -145,15 +145,19 @@ def searchDoctor():
 		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
 		result=firebase1.get('/appointments',None)
 		user_key_list=[]
+		pateint_search_url=[]
 		for i in result.keys():
 			user_key_list.append(i)
 
 		for i in user_key_list:
 			if result[i]['doctor_name'] == name:
 				patient_mobile_numbers.append(result[i]['patient_number'])
+				string_url="http://127.0.0.1:5000/searchPatient/"+result[i]['patient_number']
+				pateint_search_url.append(string_url)
 
 		if flag == 1:
-			return render_template('displayDoctor.html',name=name,aadhar=aadhar,appointments=appointments,department=department,hospital=hospital,mobile=mobile,employee=employee,number_list=patient_mobile_numbers)
+			return render_template('displayDoctor.html',name=name,aadhar=aadhar,appointments=appointments,department=department,hospital=hospital,mobile=mobile,employee=employee,number_list=patient_mobile_numbers,url_list=pateint_search_url)
+
 
 		if flag == 0:
 			error="Invalid Doctor"
@@ -180,16 +184,80 @@ def searchPatient():
 				appointments=result[i]['appointments_count']
 				flag=1
 				user_key_list=[]
-				return render_template('displayPatient.html',name=name,file=file,mobile=mobile,address=address,appointments=appointments)
+
+
+		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+		result=firebase1.get('/appointments_patients',None)
+		user_key_list=[]
+		doctor_id_url=[]
+		for i in result.keys():
+			user_key_list.append(i)
+
+		for i in user_key_list:
+			if result[i]['patient_name'] == name:
+				string_url="http://127.0.0.1:5000/searchDoctor/"+result[i]['doctor_id']
+				doctor_id_url.append(string_url)
+
+		if flag == 1:
+			return render_template('displayPatient.html',name=name,file=file,mobile=mobile,address=address,appointments=appointments,doctor_list=doctor_id_url)
 
 		if flag == 0:
 			error="Invalid Patient"
 
 	return render_template('searchPatient.html',error=error)
 
+@app.route('/searchPatient/<number>',methods=['GET'])
+def searchPatient_by_number(number):
+	firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+	result=firebase1.get('/patient',None)
+	user_key_list=[]
+	flag=0
+	for i in result.keys():
+		user_key_list.append(i)
 
+	for i in user_key_list:
+		if result[i]['file_number'] == number:
+			name=result[i]['name']
+			file=result[i]['file_number']
+			mobile=result[i]['mobile_number']
+			address=result[i]['address']
+			appointments=result[i]['appointments_count']
+			flag=1
+			user_key_list=[]
+			return render_template('displayPatient.html',name=name,file=file,mobile=mobile,address=address,appointments=appointments)
 
+	if flag == 0:
+			error="Invalid Patient"
 
+	return render_template('searchPatient.html',error=error)
+
+@app.route('/searchDoctor/<id>',methods=['GET'])
+def searchDoctor_by_id(id):
+	firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
+	result=firebase1.get('/doctor',None)
+	user_key_list=[]
+	flag=0
+	for i in result.keys():
+		user_key_list.append(i)
+
+	for i in user_key_list:
+		if result[i]['employee_number'] == id:
+			name=result[i]['name']
+			aadhar=result[i]['aadhar_number']
+			#appointments=result[i]['appointments_count']
+			department=result[i]['department']
+			hospital=result[i]['hospital']
+			mobile=result[i]['mobile_number']
+			employee=result[i]['employee_number']
+			flag=1
+
+	if flag == 1:
+		return render_template('displayDoctor.html',name=name,aadhar=aadhar,mobile=mobile,department=department,hospital=hospital)
+
+	elif flag == 0:
+			error="Invalid Doctor"
+
+	return render_template('searchDoctor.html',error=error)
 
 
 
