@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Oak Crest - Login</title>
+    <title>Oak Crest - Sign Up</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <style>
@@ -46,7 +46,7 @@
         <img class="responsive-img" style="width: 250px;" src="NewLogo.png" />
         <div class="section"></div>
 
-        <h5 class="deep-purple-text text-darken-5">Please, login into your account</h5>
+        <h5 class="deep-purple-text text-darken-5">Please, enter your details</h5>
         <div class="section"></div>
 
         <div class="container">
@@ -60,8 +60,15 @@
 
               <div class='row'>
                 <div class='input-field col s12'>
+                  <input class='validate' type='text' name='name' id='name' />
+                  <label for='name'>Enter your Name</label>
+                </div>
+              </div>
+
+              <div class='row'>
+                <div class='input-field col s12'>
                   <input class='validate' type='text' name='username' id='username' />
-                  <label for='username'>Enter your username</label>
+                  <label for='username'>Enter your User Name</label>
                 </div>
               </div>
 
@@ -70,21 +77,25 @@
                   <input class='validate' type='password' name='password' id='password' />
                   <label for='password'>Enter your password</label>
                 </div>
-                <label style='float: right;'>
-                  <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
-                </label>
+              </div>
+
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <input class='validate' type='password' name='password' id='password' />
+                  <label for='password'>Re-enter your password</label>
+                </div>
               </div>
 
               <br />
               <center>
                 <div class='row'>
-                  <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect deep-purple'>Login</button>
+                  <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect deep-purple'>Register</button>
                 </div>
               </center>
             </form>
           </div>
         </div>
-        <a href="#!">Create New Account</a>
+        <a href="#!">Sign In to Existing Account</a>
       </center>
 
       <div class="section"></div>
