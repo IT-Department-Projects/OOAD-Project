@@ -60,7 +60,7 @@
 
               <div class='row'>
                 <div class='input-field col s12'>
-                  <input class='validate' type='text' name='mobile_number' id='mobile_number' />
+                  <input class='validate' type='text' placeholder="Mobile Number" name="mobile" value="{{request.form.mobile }}" id='mobile_number'/>
                   <label for='mobile_number'>Enter your Mobile Number</label>
                 </div>
               </div>
@@ -69,11 +69,14 @@
 
               <center>
                 <div class='row'>
-                  <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect deep-purple'>Enter</button>
+                  <button type='submit' name='btn btn-default' class='col s12 btn btn-large waves-effect deep-purple' value="Enter">Enter</button>
                 </div>
               </center>
             
             </form>
+            {% if error %}
+        		<p class="error"><strong>Error:</strong> {{ error }}</p>
+      			{% endif %}
           </div>
         </div>
       </center>
@@ -83,7 +86,8 @@
     </main>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+    </script>
   </body>
 
 </html>
