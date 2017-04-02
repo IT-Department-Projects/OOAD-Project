@@ -20,7 +20,15 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity" />
-        <activity android:name=".Successful"></activity>
+        <activity android:name=".Successful" />
+        <activity
+            android:name=".DoctorActivity"
+            android:label="@string/title_activity_doctor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PatientActivity"
+            android:label="@string/title_activity_patient"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
