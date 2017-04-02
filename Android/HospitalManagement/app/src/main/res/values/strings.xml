@@ -13,4 +13,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_patient">PatientActivity</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="google_maps_key"></string>
 </resources>
