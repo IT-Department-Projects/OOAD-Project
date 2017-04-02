@@ -1,5 +1,6 @@
 package com.example.android.hospitalmanagement;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -75,12 +77,17 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
-            TextView mStatusTextView;
-//            mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
-//            updateUI(true);
+            Intent intent = new Intent(this, DoctorActivity.class);
+            startActivity(intent);
+
         } else {
             // Signed out, show unauthenticated UI.
-//            updateUI(false);
+//            Context context = getApplicationContext();
+            CharSequence text = "Sign In Failed!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(SignInActivity.this, text, duration);
+            toast.show();
         }
     }
 
@@ -91,6 +98,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            Log.d("sign", result.toString());
             handleSignInResult(result);
         }
     }
