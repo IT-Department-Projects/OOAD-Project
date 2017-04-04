@@ -45,10 +45,10 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                 .build();
 
         // Set the dimensions of the sign-in button.
-        SignInButton signInButton = (SignInButton) findViewById(R.id.sign_in_button);
-        signInButton.setSize(SignInButton.SIZE_STANDARD);
+        //SignInButton signInButton = (SignInButton) findViewById(R.id.sign_in_button);
+        //signInButton.setSize(SignInButton.SIZE_STANDARD);
 
-        findViewById(R.id.sign_in_button).setOnClickListener(this);
+        //findViewById(R.id.sign_in_button).setOnClickListener(this);
     }
 
 
@@ -66,9 +66,9 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sign_in_button:
-                signIn();
-                break;
+            //case R.id.sign_in_button:
+                //signIn();
+                //break;
         }
     }
 
