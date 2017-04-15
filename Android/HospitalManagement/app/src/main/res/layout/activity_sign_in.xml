@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="16dp">
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_signin_doctor"
                 android:layout_width="fill_parent"
@@ -60,6 +61,7 @@
                 android:text="Sign In As Doctor"
                 android:layout_weight="1"
                 android:layout_marginRight="8dp"/>
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_signin_patient"
                 android:layout_width="fill_parent"
@@ -72,13 +74,6 @@
                 android:layout_weight="1"
                 />
         </LinearLayout>
-
-        <!--<com.google.android.gms.common.SignInButton
-            android:id="@+id/sign_in_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            />-->
 
         <TextView android:id="@+id/link_signup"
             android:layout_width="fill_parent"
