@@ -1,13 +1,106 @@
-<h1>Welcome</h1>
-<nav>
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="http://127.0.0.1:5000/addDoctor">Add Doctor</a></li>
-        <li><a href="http://127.0.0.1:5000/searchDoctor">Search Doctor</a></li>
-        <li><a href="http://127.0.0.1:5000/searchPatient">Search Patient</a></li>
-        <li><a href="http://127.0.0.1:5000/topDoctors">Top Doctors</a></li>
-        <li><a href="http://127.0.0.1:5000/topPatients">Top Hospitals</a></li>
-      </ul>
-    </div>
-  </nav>
+<html>
 
+<head>
+	<title>Oak Crest - Welcome</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<style>
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
+
+		main {
+			flex: 1 0 auto;
+		}
+
+		body {
+			background: #fff;
+		}
+
+		.input-field input[type=date]:focus + label,
+		.input-field input[type=text]:focus + label,
+		.input-field input[type=email]:focus + label,
+		.input-field input[type=password]:focus + label {
+			color: #e91e63;
+		}
+
+		.input-field input[type=date]:focus,
+		.input-field input[type=text]:focus,
+		.input-field input[type=email]:focus,
+		.input-field input[type=password]:focus {
+			border-bottom: 2px solid #e91e63;
+			box-shadow: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="section"></div>
+
+	<main>
+
+		<center>
+			<img class="responsive-img" style="width: 250px" src="/static/NewLogo.png"/>
+			<div class="section"></div>
+
+			<h5 class="deep-purple-text text-darken-5">Please, select one of <br>the following options</h5>
+			<div class="section"></div>
+
+			<div class="container">
+					<ul id="nav-mobile" class="collection" style="display: inline-block; padding: 32px 48px 32px 48px; border: 1px solid #EEE;">
+		        
+		        <li class = "collection-item-avatar">
+		        	<img src="NewLogo.png" class="circle">
+      				<a href="http://127.0.0.1:5000/searchDoctor" class >
+      					<span class="title" style="font-size:20px">
+      						Search Doctor
+      					</span>
+		        	</a>
+		        </li>
+
+		        <li class = "collection-item-avatar">
+		        	<img src="images/yuna.jpg" alt="" class="circle">
+      				<a href="http://127.0.0.1:5000/searchPatient" class >
+      					<span class="title">
+      						Search Patient
+      					</span>
+		        	</a>
+		        </li>
+
+		        <li class = "collection-item-avatar">
+		        	<img src="images/yuna.jpg" alt="" class="circle">
+      				<a href="http://127.0.0.1:5000/appointments" class >
+      					<span class="title">
+      						Appointments
+      					</span>
+		        	</a>
+		        </li>
+
+						<li class = "collection-item-avatar">
+		        	<img src="images/yuna.jpg" alt="" class="circle">
+      				<a href="http://127.0.0.1:5000/schedule">
+      					<span class="title">
+      						Doctor's Schedule
+      					</span>
+		        	</a>
+		        </li>
+
+					{% if error %}
+					<p class="error"><strong>Error:</strong> {{ error }}</p>
+					{% endif %}
+				</div>
+			</div>
+		</center>
+
+		<div class="section"></div>
+		<div class="section"></div>
+	</main>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+</body>
+
+</html>

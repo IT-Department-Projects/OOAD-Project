@@ -43,7 +43,7 @@
     <main>
       
       <center>
-        <img class="responsive-img" style="width: 250px;" src="NewLogo.png" />
+        <img class="responsive-img" style="width: 250px;" src="/static/NewLogo.png" />
         <div class="section"></div>
 
         <h5 class="deep-purple-text text-darken-5">Please, login into your account</h5>
@@ -60,39 +60,36 @@
 
               <div class='row'>
                 <div class='input-field col s12'>
-                  <input class='validate' placeholder="Username" name="username" value="{{request.form.username }}" id='username' />
+                  <input class='validate' type='text' name='username' id='username' value="{{
+                              request.form.username }}" />
                   <label for='username'>Enter your username</label>
                 </div>
               </div>
 
               <div class='row'>
                 <div class='input-field col s12'>
-                  <input class='validate' type='password' placeholder="Password" name="password" value="{{request.form.password }}" id='password' />
+                  <input class='validate' type='password' name='password' id='password' value="{{
+          request.form.password }}" />
                   <label for='password'>Enter your password</label>
                 </div>
                 <label style='float: right;'>
                   <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
                 </label>
               </div>
-              <br/>
 
+              <br />
               <center>
                 <div class='row'>
-                  <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect deep-purple'>
-	                  <div class="login-help">
-	          					<a href="http://127.0.0.1:5000/register">Login</a>
-	        					</div>
-                  </button>
+                  <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect deep-purple'>Login</button>
                 </div>
               </center>
-
             </form>
             {% if error %}
-        		<p class="error"><strong>Error:</strong> {{ error }}</p>
-      			{% endif %}
+              <p class="error"><strong>Error:</strong> {{ error }}</p>
+            {% endif %}
           </div>
         </div>
-        <a href="register.html">Create New Account</a>
+        <a href="http://127.0.0.1:5000/register">Create New Account</a>
       </center>
 
       <div class="section"></div>
