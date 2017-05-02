@@ -133,7 +133,7 @@ def searchPatient():
 	return render_template('searchPatient.html',error=error)
 
 
-
+# Page yet to be done
 @app.route('/appointments',methods=['GET','POST'])
 def appointments():
 	error=None
@@ -141,27 +141,28 @@ def appointments():
 		oldstr=request.form['email_id']
 		email_id = oldstr.replace(".", "")
 		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
-		result=firebase1.get('/'+email_id,None)
+		result=firebase1.get('/aimananees@gmailcom',None)
 		user_key_list=[]
 		for i in result.keys():
 			user_key_list.append(i)
 		flag=0
 		total_list=[]
 		for i in user_key_list:
-			individual_list=[]
+			# individual_list=[]
 			doctorName=result[i]['doctorName']
-			individual_list.append(doctorName)
+			# individual_list.append(doctorName)
 			time=result[i]['time']
-			individual_list.append(time)
-			total_list.append(individual_list)
+			# individual_list.append(time)
+			# total_list.append(individual_list)
 			flag=1
 
 		if flag == 1:
-			return render_template('displayAppointments.html',total_list=total_list)
+			return render_template('displayAppointments.html',doctorName=doctorName,time=time)
 		else:
 			error="No Appointments"
 	return render_template('appointments.html',error=error)
 
+# Page yet to be done
 @app.route('/schedule',methods=['GET','POST'])
 def schedule():
 	error=None
@@ -169,7 +170,7 @@ def schedule():
 		oldstr=request.form['email_id']
 		email_id = oldstr.replace(".", "")
 		firebase1=firebase.FirebaseApplication('https://hospitalmanagementsystem-edfd9.firebaseio.com/')
-		result=firebase1.get('/'+email_id,None)
+		result=firebase1.get('/aiman@emailcom',None)
 		user_key_list=[]
 		for i in result.keys():
 			user_key_list.append(i)
@@ -178,29 +179,21 @@ def schedule():
 		for i in user_key_list:
 			individual_list=[]
 			patientName=result[i]['patientName']
-			individual_list.append(patientName)
+			# individual_list.append(patientName)
 			patient_file_number=result[i]['patient_file_number']
-			individual_list.append(patient_file_number)
+			# individual_list.append(patient_file_number)
 			patient_insurance=result[i]['patient_insurance']
-			individual_list.append(patient_insurance)
+			# individual_list.append(patient_insurance)
 			time=result[i]['time']
-			individual_list.append(time)
-			total_list.append(individual_list)
+			# individual_list.append(time)
+			# total_list.append(individual_list)
 			flag=1
 
 		if flag == 1:
-			return render_template('displaySchedule.html',total_list=total_list)
+			return render_template('displaySchedule.html',patientName=patientName, time=time)
 		else:
 			error="No Schedule"
 	return render_template('schedule.html',error=error)
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True,threaded=True)
